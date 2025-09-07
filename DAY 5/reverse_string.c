@@ -11,6 +11,9 @@ void swap(char name[],int size){
 int main(){
 
     char name[500] = "hello";
+    printf("Enter a text: ");
+    getchar();
+    fgets(name,sizeof(name),stdin);
     int size = strlen(name);
 
     swap(name,size);
