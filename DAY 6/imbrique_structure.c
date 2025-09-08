@@ -1,15 +1,29 @@
 #include <stdio.h>
+#include <string.h>
 
-struct personne{
-    char* Nom[50];
-    char* adres[50];
-};
+typedef struct {
+    char rue[100];
+    char ville[50];
+    int codePostal;
+} Adresse;
 
-struct personne p1;
-int main(){
-    p1.Nom[0] = "Alice"; 
-    p1.adres[0] = "123 Rue Principale, Paris";
+typedef struct {
+    char nom[50];
+    int age;
+    Adresse adresse;
+} Personne;
 
-    printf("%s %s",p1.Nom[0],p1.adres[0]);
+int main() {
+    Personne p1;
+    strcpy(p1.nom, "ilyas");
+    p1.age = 30;
+    strcpy(p1.adresse.rue, "bab lkhmiss 99");
+    strcpy(p1.adresse.ville, "taroudant");
+    p1.adresse.codePostal = 83000;
 
+    printf("Nom: %s\n", p1.nom);
+    printf("Age: %d\n", p1.age);
+    printf("Adresse: %s, %s, %d\n", p1.adresse.rue, p1.adresse.ville, p1.adresse.codePostal);
+
+    return 0;
 }
