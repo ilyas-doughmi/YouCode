@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-
-
 void add();
 void show();
 void search();
@@ -14,7 +12,6 @@ char number[200][200] = {"\0"};
 bool found = false;
 
 int size = sizeof(name) / sizeof(name[0]);
-
 
 int main(){
     int choix;
