@@ -17,12 +17,13 @@ int main(){
 }
 
 void save(){
-    FILE *fp = fopen("book.txt","w");
+    FILE *fp = fopen("book.dat","wb");
     if(fp == NULL){
         printf("Problem Creating File\n");
     }
     for(int i = 0 ; i < 3; i++){
-        fprintf(fp,"%s %d\n",bk[i].title,bk[i].year);
+        fwrite(bk,sizeof(Book),3,fp);
+        return;
     }
     
 
@@ -30,16 +31,19 @@ void save(){
 }
 
 void load(){
-    char buffet[1024];
-    FILE *fp = fopen("book.txt","r");
+    char booktemp[3];
+    FILE *fp = fopen("book.dat","rb");
 
     if(fp == NULL){
         printf("Problem Reading FIle\n");
+        return;
     }
 
-    while(fgets(buffet,sizeof(buffet),fp)) {
-        printf("%s",buffet);
-    }
+    fread(bk,sizeof(Book),3,fp);
 
     fclose(fp);
+
+    for(int i = 0 ; i < 3 ; i++){
+        printf("%s %d\n",bk[i].title,bk[i].year);
+    }
 }
