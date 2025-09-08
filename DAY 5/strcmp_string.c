@@ -13,6 +13,7 @@ int stricmp(char str1[],char str2[]){
 }
 int main(){
     char str1[200] = "hello";
+    
     char str2[200] = "helloo";
 
     if(stricmp(str1,str2) == 0){
