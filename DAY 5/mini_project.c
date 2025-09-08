@@ -26,6 +26,7 @@ int main(){
             case 0:system("cls");printf("Bye\n");break;
             default:printf("Unvalide Choix\n");break;
         }
+        
     }while(choix != 0);
 }
 
