@@ -4,4 +4,4 @@
 ![Jours](https://img.shields.io/badge/Durée-15%20jours-success.svg?style=flat-square)
 
 ## 📌 Présentation  
-Dépôt regroupant les **exercices & mini-projets en C** réalisés durant la session **PERIODE SAS** de YouCode.  \
+Dépôt regroupant les **exercices & mini-projets en C** réalisés durant la session **PERIODE SAS** de YouCode. 
